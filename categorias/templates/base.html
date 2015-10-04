@@ -1,0 +1,14 @@
+<html>
+	<head>
+		<title>Exemplo Django</title>
+	</head>
+	<body>
+		<h1>Exemplo django</h1>
+		<hr>
+		<ul>
+			<li><a href="{% url 'categorias:lista_categorias' %}">Categorias</a></li>
+		</ul>
+		{% block content%}
+		{% endblock %}
+	</body>
+</html>

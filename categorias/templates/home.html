@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+	Fiz esse pequeno exemplo pra tu dar uma olhada e ir brincando.<br>
+	Existem 3 caras importantes que fazem a mágica acontecer.
+	<ul>
+		<li><a href="https://docs.djangoproject.com/en/1.8/topics/db/models/" target="_blank">Models</a></li>
+		<li><a href="https://docs.djangoproject.com/en/1.8/topics/forms/modelforms/#modelform" target="_blank">Forms</a></li>
+		<li><a href="https://docs.djangoproject.com/en/1.8/topics/http/views/" target="_blank">Views</a></li>
+	</ul>
+
+	Para fazer um módulo simples você irá seguir o seguinte fluxo:<br>
+
+	1 - django-admin.py startapp nome_que_queira; <br>
+	2 - Adicionar o nome da app no INSTALED_APPS que fica no arquivo example/settinsg.py<br>
+	3 - Criar url principal no arquivo example/urls.py (igual a do categorias, só não esquece de colocar o nome da sua app no inicio e no namespace);<br>
+	Exemplo:
+	url(r'^app_nova/', include('app_nova.urls', namespace='app_nova')),<br><br>
+
+	O django é muito claro quando identifica um problema, se tudo ocorreu bem até aqui, o django vai te dar um erro dizendo que não existe o arquivo de url que tu chamou ali no item 3. <br>
+	
+	Ai você cria ele igual o categorias/urls.py =) <br>
+	Cria ele vazio com as urls comentadas: <a href="https://dpaste.de/GiJm" target="_blank">https://dpaste.de/GiJm</a> <br>
+
+	Agora você trabalha na sua view:<br>
+
+	4 - Descomenta a url de lista e cria a view que exibe a lista.<br>
+	5 - Descomentar a url de inserir e criar a view que insere os dados;<br>
+	6 - Descomentar a url de editar e criar a view que editar os dados;<br>
+
+
+	Eu deixei faltando algumas coisas, porque o django irá te pedir isso e assim você verá o quanto ele é sugestivo.<br>
+	Vocẽ vai chamar algo, ele vai te dizer que não existe aquilo e dai você cria.
+
+
+
+{% endblock %}

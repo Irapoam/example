@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	
+<h2>Lista de categorias</h2>
+
+<a href="{% url 'categorias:nova_categoria' %}">Novo</a>
+<table>
+	<thead>
+		<th>Editar</th>
+		<th>Nome<th>
+	</thead>
+	<tbody>
+		{% for categoria in categorias %}
+			<tr>
+				<td><a href="{% url 'categorias:editar_categoria' pk=categoria.pk %}">Editar</a></td>
+				<td>{{ categoria.nome }}</td>
+			</tr>
+		{% endfor %}
+	</tbody>
+</table>
+
+{% endblock %}

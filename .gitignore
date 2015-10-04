@@ -1,0 +1,17 @@
+bin
+build
+include
+lib
+local
+man
+share
+*.pyc
+*.db
+*.sqlite3
+media/
+settings_local.py
+node_modules/
+
+bundle.css
+bundle.min.css
+static_collected/
